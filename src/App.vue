@@ -3,7 +3,7 @@
     <!-- 추가된 헤더 컴포넌트 사용 -->
     <main-header></main-header>
     <router-view></router-view>
-    <!-- 추가된 풋터 컴포넌트 사용 -->
+    <!-- 추가된 풋터 컴포넌트 사용 TEST-->
     <main-footer></main-footer>
   </div>
 </template>
