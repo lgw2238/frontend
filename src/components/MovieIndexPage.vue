@@ -2,7 +2,7 @@
     <div class="wrap">
       <h1>5월 마지막주 영화 예매 순위 </h1>
       <h3>
-        치즈크러스트 맛있다 
+        [치즈크러스트 맛있다] 
       </h3>
       <ul class="movies">
         <li v-for="movie in movies" class="item" :key="movie.id">

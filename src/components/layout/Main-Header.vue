@@ -2,10 +2,11 @@
 	<header>
 		<div class="menuWrap">
 			<ul class="menu">
-				<li><a href="javascript:;">로그인</a></li>
-				<li><a href="javascript:;">게시판</a></li>
-				<li><a href="javascript:;">1:1문의</a></li>
-				<li><a href="javascript:;">마이페이지</a></li>
+				<li><router-link :to="{ name: 'Login'}" class="link">로그인</router-link></li>
+				<!--<li><a href="/login">로그인</a></li>-->
+				<li><router-link :to="{ name: 'Board'}" class="link">게시판</router-link></li>
+				<li><a href="https://www.naver.com/">네이버</a></li>
+				<li><a href="/">돌아가기</a></li>
 			</ul>
 		</div>
 	</header>

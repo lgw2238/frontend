@@ -2,6 +2,7 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import Index from '@/components/MovieIndexPage'
 import Show from '@/components/MovieShowPage'
+import Login from '@/components/login/Login'
 Vue.use(Router)
 export const router = new Router({
     mode: 'history',
@@ -14,6 +15,11 @@ export const router = new Router({
             path: '/:id',
             name: 'show',
             component: Show
+        },
+        {
+            path: '/login',
+            name: 'Login',
+            component: Login
         }
     ]
 })
