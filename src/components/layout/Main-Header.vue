@@ -36,6 +36,7 @@ header h1{position:absolute; top:0; left:100px;}
 header ul.menu:after{display:block; clear:both; content:'';}
 header ul.menu{position:absolute; top:20px; right:50px;}
 header ul.menu li{float:left; padding:10px 20px; list-style:none;}
+li{ font-family: sans-serif;  font-size: 1.4rem; text-transform: capitalize;}
 .header .topline { position:relative; height:30px; margin:0 10px; }
 .header .topline .headmenu { position:absolute; right:0; top:4px; }
 .header .topline .headmenu a { font-weight:bold; color:#2c3e50; }

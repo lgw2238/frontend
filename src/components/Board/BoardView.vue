@@ -1,6 +1,6 @@
 <template>
 	<div class="boardview">
-		<h1>This is an board view page</h1>
+		<h1>BOARD DETAIL</h1>
 		<table>
 			<colgroup>
 				<col style="width:18.5%">
@@ -62,12 +62,12 @@ export default {
 };
 </script>
 <style scoped>
-    .board { width:800px; margin: 20px auto; }
-    .board table { width:100%; border-top:2px solid #1d4281; border-spacing:0; }
-    .board table th { padding:8px 10px 10px 10px; vertical-align:middle; color:#1d4281; font-size:14px; border-bottom:1px solid #ccc; background:#f8f8f8; }
-    .board table td { padding:7px 20px 9px 20px; text-align:left; vertical-align:middle; border-bottom:1px solid #ccc; font-size:14px; line-heighT:150%; }
-    .board table td.title { font-weight: bold; }
-    .buttons { position:relative; height:32px; margin-top:20px; }
-    .buttons > div.right { position:absolute; height:32px; right:0; }
-    .buttons > div > button { overflow:visible; cursor:pointer; min-width:125px; height:32px; margin:0 2px; padding:0 15px; line-height:32px; font-size:14px; border:1px solid #dfdfdf; background:#fff; border-radius:10px; }
+   .boardview { width:800px; margin: 20px auto; }
+   .boardview table { width:100%; border-top:2px solid #1d4281; border-spacing:0; }
+   .boardview table th { padding:8px 10px 10px 10px; vertical-align:middle; color:#1d4281; font-size:14px; border-bottom:1px solid #ccc; background:#f8f8f8; }
+   .boardview table td { padding:7px 20px 9px 20px; text-align:left; vertical-align:middle; border-bottom:1px solid #ccc; font-size:14px; line-heighT:150%; }
+   .boardview table td.title { font-weight: bold; }
+   .buttons { position:relative; height:32px; margin-top:20px; }
+   .buttons > div.right { position:absolute; height:32px; right:0; }
+   .buttons > div > button { overflow:visible; cursor:pointer; min-width:125px; height:32px; margin:0 2px; padding:0 15px; line-height:32px; font-size:14px; border:1px solid #dfdfdf; background:#fff; border-radius:10px; }
 </style>

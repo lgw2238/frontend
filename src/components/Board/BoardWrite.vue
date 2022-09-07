@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="BoardWrite">
 	<table>
         <colgroup>
             <col style="width:18.5%">
@@ -47,12 +47,12 @@ export default {
 },
     methods : {
         boardSaveClick() {
-            let boardItem = { writer : this.writer, subject : this.subject, content : this.content };
-            this.$http.post("/api/board", boardItem).then((res)=>{
-                console.log(res);
-            }).catch((err) => {
-                console.log(err);
-            });
+            // let boardItem = { writer : this.writer, subject : this.subject, content : this.content };
+            // this.$http.post("/api/board", boardItem).then((res)=>{
+            //     console.log(res);
+            // }).catch((err) => {
+            //     console.log(err);
+            // });
             if (this.writer == "") {
                 alert("작성자를 입력하세요.");
                 this.$refs.writerInput.focus();
@@ -91,11 +91,10 @@ export default {
 </script>
 
 <style scoped>
-.board { width:800px; margin: 20px auto; }
-.board table { width:100%; border-top:2px solid #1d4281; border-spacing:0; }
-.board table th { padding:8px 10px 10px 10px; vertical-align:middle; color:#1d4281; font-size:14px; border-bottom:1px solid #ccc; background:#f8f8f8; }
-.board table td { padding:7px 20px 9px 20px; text-align:left; vertical-align:middle; border-bottom:1px solid #ccc; font-size:14px; line-heighT:150%; }
-.board table td input, .board table td textarea { width:100%; color:#000 !important; } 
+.BoardWrite table { width:100%; width:800px; border-top:2px solid #1d4281; border-spacing:0; }
+.BoardWrite table th { padding:8px 10px 10px 10px; vertical-align:middle; color:#1d4281; font-size:14px; border-bottom:1px solid #ccc; background:#f8f8f8; }
+.BoardWrite table td { padding:7px 20px 9px 20px; text-align:left; vertical-align:middle; border-bottom:1px solid #ccc; font-size:14px; line-heighT:150%; }
+.BoardWrite table td input, .board table td textarea { width:100%; color:#000 !important; } 
 .buttons { position:relative; height:32px; margin-top:20px; }
 .buttons > div.right { position:absolute; height:32px; right:0; }
 .buttons > div > .button { overflow:visible; cursor:pointer; min-width:125px; height:32px; margin:0 2px; padding:0 15px; line-height:32px; font-size:14px; border:1px solid #dfdfdf; background:#fff; border-radius:10px; }

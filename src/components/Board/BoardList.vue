@@ -1,6 +1,6 @@
 <template>
 	<div class="board">
-		<h1>This is an board list page</h1>
+		<h1>BOARD LIST</h1>
         <div class="buttons">
                 <div class="right">
                     <router-link :to="{ name: 'BoardWrite' }" class="button blue"><span>쓰기</span></router-link>
