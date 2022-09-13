@@ -6,6 +6,8 @@ import Login from '@/components/login/Login'
 import Board from '@/components/Board/BoardList'
 import BoardView from '@/components/Board/BoardView'
 import BoardWrite from '@/components/Board/BoardWrite' 
+import BoardEdit from '@/components/Board/BoardEdit' 
+
 Vue.use(Router)
 
 export const router = new Router({
@@ -39,6 +41,11 @@ export const router = new Router({
             path: '/boardwrite',
             name: 'BoardWrite',
             component: BoardWrite
-          }
+        },
+        {
+            path: '/boardedit',
+            name: 'BoardEdit',
+            component: BoardEdit
+        }
     ]
 })

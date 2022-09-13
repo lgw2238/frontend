@@ -84,7 +84,7 @@ export default {
             }
         },
         boardCancelClick() {
-	        this.$router.go(this.$http.get('/api/board'));
+	        this.$router.push({name : 'BoardList'});
         }
     }
 };

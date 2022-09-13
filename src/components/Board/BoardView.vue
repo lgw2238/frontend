@@ -26,6 +26,9 @@
 			</tbody>
 		</table>
         <div class="buttons">
+            <div class="left">
+                <button class="button" @click="boardEditClick">수정</button>
+            </div>
 	        <div class="right">
 		    <button class="button" @click="boardListClick">목록</button>
 	         </div>
@@ -52,8 +55,14 @@ export default {
             });
 	    },
     boardListClick() {
-        this.$router.push('BoardList');
+        this.$router.push({name : 'BoardList' });
         // this.$router.go(-1);
+        },
+    boardEditClick() {
+        var result = confirm("수정하시겠습니까?");
+        if (result) {
+            this.$router.push({name : 'BoardEdit', query : {boardNo : this.boardItem.no}});
+            }
         }
     },
     mounted() {
@@ -68,6 +77,7 @@ export default {
    .boardview table td { padding:7px 20px 9px 20px; text-align:left; vertical-align:middle; border-bottom:1px solid #ccc; font-size:14px; line-heighT:150%; }
    .boardview table td.title { font-weight: bold; }
    .buttons { position:relative; height:32px; margin-top:20px; }
+   .buttons > div.left { position:absolute; height:32px; left:0; }
    .buttons > div.right { position:absolute; height:32px; right:0; }
    .buttons > div > button { overflow:visible; cursor:pointer; min-width:125px; height:32px; margin:0 2px; padding:0 15px; line-height:32px; font-size:14px; border:1px solid #dfdfdf; background:#fff; border-radius:10px; }
 </style>
