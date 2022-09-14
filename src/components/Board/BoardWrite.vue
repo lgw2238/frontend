@@ -22,6 +22,7 @@
 </table>
         <div class="buttons">
             <div class="right">
+                <button class="button" @click="boardDeleteClick">삭제</button>
                 <button class="button blue" @click="boardSaveClick">등록</button>
                 <button class="button" @click="boardCancelClick">취소</button>
             </div>
@@ -85,6 +86,24 @@ export default {
         },
         boardCancelClick() {
 	        this.$router.push({name : 'BoardList'});
+        },
+        async boardDeleteClick() {
+            var result = confirm("삭제하시겠습니까?");
+            if (result) {
+                try {
+                    let res = await this.$http.delete("/api/board" + this.$route.query.boardNo);
+                    console.log(res.data.success);
+                    if (res.data.success == true) {
+                        alert("삭제되었습니다.");
+                        this.$router.push({name : 'BoardList'});
+                    } else {
+                        alert("삭제되지 않았습니다.");
+                    }
+                } catch(err) {
+                    console.log(err);
+                    alert("삭제되지 않았습니다.");
+                }
+            }
         }
     }
 };
